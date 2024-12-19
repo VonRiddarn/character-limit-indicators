@@ -1,10 +1,16 @@
+# Disclaimer
+This is a work in progress.<br />
+If this text is not deleted (which, it isn't since you're reading it) the project is not ready for end-usage.
+
 # Character limit indicators
 *A simple, no overengineered bs, line width indicator for VSCode.*
 
 This extention does nothing more than indicate visually when you are close to hitting your line limit.<br />
 Fully customizable, fully extendable, fully open source and free.<br />
 
-# Features | TODO: Add pictures and gifs
+# Features
+
+TODO: Add pictures and gifs
 
 **Limit indicators**<br />
 Fully customizable indicators that sits statically in your files.<br />
@@ -69,3 +75,9 @@ The value is how close to the line you have to be before the counter activates. 
 
 None.. As of now.<br />
 However, if you find any, please [SUBMIT A REPORT](https://github.com/VonRiddarn/character-limit-indicators/issues)
+
+# Similar extentions that deserve a shout-out
+
+[Too long line limit : ](https://github.com/MASSHUU12/too-long-line-limit)
+
+[Line width indicator](https://github.com/lbragile/Line-Width-Indicator)
