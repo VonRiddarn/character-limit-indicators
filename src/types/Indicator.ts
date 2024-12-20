@@ -5,6 +5,7 @@ type Indicator = {
 	limit: Number,
 	color: string,
 	style: IndicatorStyle,
+	isActive: boolean
 }
 
 export default Indicator;

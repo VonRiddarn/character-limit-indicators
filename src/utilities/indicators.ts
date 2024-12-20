@@ -9,14 +9,16 @@ const indicators:IndicatorCollection = {
 		type: "soft",
 		limit: 80,
 		color: "#ffea8e",
-		style: "block"
+		style: "block",
+		isActive: true // Internal, do not show to end user!
 	},
 
 	hard: {
 		type: "hard",
 		limit: 100,
 		color: "#d12651",
-		style: "block"
+		style: "block",
+		isActive: true // Internal, do not show to end user!
 	},
 };
 
