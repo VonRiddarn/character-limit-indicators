@@ -3,20 +3,86 @@
   "displayName": "Character Limit Indicators",
   "description": "A simple, no overengineered bs, line width indicator for VSCode.",
   "version": "0.0.1",
+  "pricing": "Free",
   "author": {
 	"name": "Timmy Öhman",
 	"url": "https://github.com/VonRiddarn"
   },
-  "publisher": "TODO: Add publisher identification here?",
+  "publisher": "VonRiddarn",
+  "homepage": "https://github.com/VonRiddarn/character-limit-indicators",
+  "repository": {
+	"type": "git",
+	"url": "https://github.com/VonRiddarn/character-limit-indicators"
+  },
+  "bugs": {
+	"url": "https://github.com/VonRiddarn/character-limit-indicators/issues"
+  },
+  "license": "MIT",
   "engines": {
     "vscode": "^1.96.0"
   },
-  "categories": [
-    "Other"
+  "keywords": [
+	"Visual",
+	"Line",
+	"Character",
+	"Limit"
   ],
-  "activationEvents": [],
-  "main": "./out/extension.js",
+  "categories": [
+    "Other",
+	"Formatters",
+	"Linters",
+	"Visualization"
+  ],
+  "activationEvents": [
+	"onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
   "contributes": {
+	"configuration":[
+		{
+			"title": "Hard Indicator",
+			"order": 0,
+			"properties":{
+				"characterLimitIndicators.indicators.hard.style": {
+					"type": "string",
+					"default": "block",
+					"enum": [
+						"block",
+						"line"
+					],
+					"enumDescriptions": [
+						"Visualization: █",
+						"Visualization: |"
+					],
+					"description": "How the indicator is to be displayed in the editor window."
+				},
+				"haracterLimitIndicators.indicators.hard.color": {
+					"type":"string",
+					"default":"#d1265180",
+					"description": "The color of the hard indicator represented by hex.\nAccepted formats: #RGB\t#RRGGBB\t#RRGGBBTT"
+				}
+			}
+		},
+		{
+			"title": "Soft Indicator",
+			"order": 1,
+			"properties":{
+				"placeholder":{
+					"type": "object"
+				}
+			}
+		},
+		{
+			"title": "Countdown",
+			"order": 2,
+			"properties":{
+				"placeholder":{
+					"type": "object"
+				}
+			}
+		}
+
+	],
     "commands": [
       {
         "command": "character-limit-indicators.helloWorld",
