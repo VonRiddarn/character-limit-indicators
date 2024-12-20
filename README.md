@@ -33,38 +33,38 @@ The project is 100% open source - you can even publish your edited version!
 
 
 ### Esthetics
-`cli.limits.indicator.hard.style` : `"line"` or `"block"`<br/>
-`cli.limits.indicator.soft.style` : `"line"` or `"block"`<br/>
+`characterLimitIndicators.indicators.hard.style` : `"block"` or `"line"`<br/>
+`characterLimitIndicators.indicators.soft.style` : `"block"` or `"line"`<br/>
 Decides if the indicator should be displayed as block or line cursor style.<br/>
 Line:	|<br/>
 Block:	█<br/>
 	
 
-`cli.limits.indicator.hard.color` : `rgba` or `hex`<br/>
-`cli.limits.indicator.soft.color` : `rgba` or `hex`<br/>
+`characterLimitIndicators.indicators.hard.color` : `hex`<br/>
+`characterLimitIndicators.indicators.soft.color` : `hex`<br/>
 The color of the limit indicator.<br/>
-rgba: rgba(209, 38, 81, 1)<br/>
-hex: #d12651<br/>
+hex example: `#d1265180`<br/>
+hex formats: `#RGB` `#RRGGBB` `#RRGGBBAA`
 
 ### Position
-`cli.limits.indicator.hard.limit` : `1 - 999`<br/>
-`cli.limits.indicator.soft.limit` : `1 - 999` or `0`<br/>
+`characterLimitIndicators.indicators.hard.limit` : `1 - 999`<br/>
+`characterLimitIndicators.indicators.soft.limit` : `0` or `1 - 999`<br/>
 The placement from origin of your limit indicator.<br/>
-<= 0 Means it's not active and only works for the soft limit indicator<br />
+0 Means it's not active and only works for the soft limit indicator<br />
 <br/>
 *English: How far to the right the limit indicator will be placed.<br/>
 If the soft limit is less than or equal to 0, it will not be active.*
 
 ### Countdown
-`cli.limits.countdown.color` : `rgba` or `hex`<br/>
+`characterLimitIndicators.countdown.color` : `hex`<br/>
 The background color of the in-line limits countdown.<br />
-rgba: rgb(255, 234, 142)<br/>
-hex: #ffea8e<br/>
+hex example: `#ffea8e80`<br/>
+hex formats: `#RGB` `#RRGGBB` `#RRGGBBAA`
 
-`cli.limits.countdown.offset` : `0 | 1 - 999`<br/>
+`characterLimitIndicators.countdown.offset` : `0` or `1 - 999`<br/>
 The offset from the next limit until activation of the in-line character countdown.<br/>
 Will always be active after crossing the soft limit!<br />
-<= 0 Means it's not active.<br/>
+0 Means it's not active.<br/>
 <br/>
 *English: Show a countdown next to your file cursor when you're close to hitting the line.<br/>
 The value is how close to the line you have to be before the counter activates. If 0 it is off.*
