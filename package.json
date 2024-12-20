@@ -34,16 +34,51 @@
 	"Visualization"
   ],
   "activationEvents": [
-	"onStartupFinished"
-  ],
-  "main": "./dist/extension.js",
-  "contributes": {
-	"configuration":[
-		{
+	  "onStartupFinished"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"configuration":[
+			{
+				"title": "Soft Indicator",
+				"order": 0,
+				"properties":{
+					"characterLimitIndicators.indicators.soft.style": {
+						"order": 0,
+						"type": "string",
+						"default": "block",
+						"enum": [
+							"block",
+							"line"
+						],
+						"enumDescriptions": [
+							"Visualization: █",
+							"Visualization: |"
+						],
+						"description": "How the indicator is to be displayed in the editor window."
+					},
+					"characterLimitIndicators.indicators.soft.color": {
+						"order": 1,
+						"type":"string",
+						"default":"#ffea8e80",
+						"description": "The color of the soft indicator represented by hex.\nAccepted formats: #RGB\t#RRGGBB\t#RRGGBBTT"
+					},
+					"characterLimitIndicators.indicators.soft.limit": {
+						"order": 2,
+						"type": "integer",
+						"default": 80,
+						"minimum": 0,
+						"maximum": 150,
+						"markdownDescription": "The indentation of the soft indicator."
+					}
+				}
+			},
+			{
 			"title": "Hard Indicator",
-			"order": 0,
+			"order": 1,
 			"properties":{
 				"characterLimitIndicators.indicators.hard.style": {
+					"order": 0,
 					"type": "string",
 					"default": "block",
 					"enum": [
@@ -56,19 +91,19 @@
 					],
 					"description": "How the indicator is to be displayed in the editor window."
 				},
-				"haracterLimitIndicators.indicators.hard.color": {
+				"characterLimitIndicators.indicators.hard.color": {
+					"order": 1,
 					"type":"string",
 					"default":"#d1265180",
 					"description": "The color of the hard indicator represented by hex.\nAccepted formats: #RGB\t#RRGGBB\t#RRGGBBTT"
-				}
-			}
-		},
-		{
-			"title": "Soft Indicator",
-			"order": 1,
-			"properties":{
-				"placeholder":{
-					"type": "object"
+				},
+				"characterLimitIndicators.indicators.hard.limit": {
+					"order": 2,
+					"type": "integer",
+					"default": 100,
+					"minimum": 80,
+					"maximum": 150,
+					"markdownDescription": "The indentation of the hard indicator."
 				}
 			}
 		},
@@ -76,8 +111,18 @@
 			"title": "Countdown",
 			"order": 2,
 			"properties":{
-				"placeholder":{
-					"type": "object"
+				"characterLimitIndicators.countdown.offset": {
+					"order": 0,
+					"type":"integer",
+					"default": 15,
+					"minimum": 0,
+					"maximum": 150
+				},
+				"characterLimitIndicators.countdown.color": {
+					"order": 1,
+					"type":"string",
+					"default":"#d1265180",
+					"description": "The color of the countdown background represented by hex.\nAccepted formats: #RGB\t#RRGGBB\t#RRGGBBTT"
 				}
 			}
 		}
